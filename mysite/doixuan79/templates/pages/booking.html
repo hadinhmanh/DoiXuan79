@@ -1,0 +1,210 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+<!-- Banner Section -->
+<section class="banner-section">
+    <div class="container">
+        <div class="banner-content">
+            <h1>Khám Phá Đồi 79 Mùa Xuân</h1>
+            <p>Trải nghiệm không gian xanh mát, lịch sử và văn hóa đặc sắc</p>
+            <a href="#booking-form" class="btn">Khám phá ngay</a>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Form Section -->
+<section id="booking-form" class="booking-form-container">
+    <h2>Đặt Chỗ Ngay</h2>
+    <form>
+        <!-- Chọn Loại Dịch Vụ -->
+        <div class="mb-4">
+            <label for="serviceType" class="form-label">Chọn Loại Dịch Vụ</label>
+            <select id="serviceType" class="form-control">
+                <option value="buffet-lau-han-quoc">Buffet lẩu Hàn Quốc</option>
+                <option value="lau-hoi-hongkong">Lẩu hơi HongKong</option>
+                <option value="cafe-eden">Quán Cafe điện ảnh Eden</option>
+                <option value="san-khau-ca-nhac">Sân khấu ca nhạc cuối tuần</option>
+                <option value="kayak">Chèo thuyền Kayak</option>
+                <option value="camping">Camping</option>
+                <option value="pickleball">Pickleball</option>
+                <option value="khu-tre-em">Khu vui chơi trẻ em</option>
+            </select>
+        </div>
+
+        <!-- Ngày -->
+        <div class="mb-4">
+            <label for="date" class="form-label">Chọn Ngày</label>
+            <input type="date" id="date" class="form-control">
+        </div>
+
+        <!-- Số Lượng Khách -->
+        <div class="mb-4">
+            <label for="groupSize" class="form-label">Số Lượng Khách</label>
+            <input type="number" id="groupSize" class="form-control" min="1" max="20" placeholder="Ví dụ: 5">
+        </div>
+
+        <!-- Đặt Chỗ -->
+        <div class="text-center">
+            <button type="submit" class="booking-button">Xác Nhận Đặt Chỗ</button>
+        </div>
+    </form>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+    <div class="container">
+        <h2>Lợi Ích Khi Đặt Chỗ</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/60" alt="Tiện lợi">
+                    <h4>Tiện Lợi</h4>
+                    <p>Đặt chỗ dễ dàng và nhanh chóng chỉ với vài bước đơn giản.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/60" alt="Ưu đãi nhóm">
+                    <h4>Ưu Đãi Nhóm</h4>
+                    <p>Nhận nhiều ưu đãi đặc biệt khi đặt chỗ theo nhóm.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/60" alt="Quản lý lịch trình">
+                    <h4>Quản Lý Lịch Trình</h4>
+                    <p>Tích hợp thông báo lịch trình, không lo bỏ lỡ sự kiện.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    /* Banner Section */
+    .banner-section {
+        background-image: url('{% static 'doixuan/assets/img/sukien/c2.webp' %}'); /* Replace with your banner image URL */
+        background-size: cover;
+        background-position: center;
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+    .banner-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+        z-index: 0;
+    }
+    .banner-content {
+        position: relative;
+        z-index: 1;
+    }
+    .banner-content h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color:white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    .banner-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+    .banner-content .btn {
+        background-color: #2e7d32;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    .banner-content .btn:hover {
+        background-color: #43a047;
+    }
+
+    /* Booking Form Section */
+    .booking-form-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .booking-form h2 {
+        color: #2e7d32;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .form-label {
+        font-weight: bold;
+        color: #333;
+    }
+    .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        height: 45px;
+    }
+    .form-control:focus {
+        box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+        border-color: #2e7d32;
+    }
+    .booking-button {
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .booking-button:hover {
+        background-color: #43a047;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+        background: #f9f9f9;
+        padding: 60px 20px;
+    }
+    .benefits-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #2e7d32;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+    .benefit-item {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .benefit-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .benefit-item img {
+        width: 60px;
+        margin-bottom: 20px;
+    }
+    .benefit-item h4 {
+        font-size: 1.3rem;
+        color: #2e7d32;
+        margin-bottom: 10px;
+    }
+    .benefit-item p {
+        font-size: 1rem;
+        color: #666;
+    }
+    
+</style>
+{% endblock %}

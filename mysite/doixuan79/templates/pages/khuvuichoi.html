@@ -1,0 +1,279 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    
+    /* Header Section */
+    .header-section {
+        position: relative;
+        background-image: url('{% static 'doixuan/assets/img/dichvu/giaitri/giaitri1.webp' %}'); /* Thay link ảnh banner tại đây */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Hiệu ứng mờ */
+        z-index: 0;
+    }
+    .header-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        z-index: 1;
+        color:white;
+        position: relative;
+    }
+    .header-section p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        z-index: 1;
+        position: relative;
+    }
+    .header-section .btn {
+        z-index: 1;
+        position: relative;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #2e7d32;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .header-section .btn:hover {
+        background-color: #43a047;
+    }
+
+    .image-effect {
+        border-radius: 30px; /* Bo tròn các góc */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+    }
+    
+    .image-effect:hover {
+        transform: scale(1.05); /* Phóng to ảnh khi di chuột */
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+    }
+    
+    
+</style>
+<body>
+    <!-- Header -->
+    <section class="header-section">
+        <h1>Khám phá Đồi 79 Mùa Xuân</h1>
+        <p>Trải nghiệm không gian xanh mát, lịch sử và văn hóa đặc sắc</p>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Các dịch vụ giải trí của chúng tôi</h2>
+            <p class="text-center">
+                Khu du lịch của chúng tôi mang đến trải nghiệm giải trí đa dạng, từ sân Pickleball hiện đại, 
+                khu vui chơi trẻ em đầy màu sắc, đến quán cà phê ven hồ thư giãn. Đặc biệt, các dịch vụ như cắm trại, 
+                và các hoạt động ngoài trời khác giúp bạn và gia đình có một kỳ nghỉ tràn đầy niềm vui và năng lượng. 
+                Hãy đến để khám phá và tận hưởng những khoảnh khắc đáng nhớ cùng chúng tôi!"
+            </p>
+        </div>
+    </section>
+
+    <!-- About Start -->
+        <div class="container-fluid about py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="h-100">
+                            <img src="{% static 'doixuan/assets/img/dichvu/giaitri/giaitri5.jpg' %}" class="img-fluid w-100 h-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), >
+                        <h1 class="mb-4">Chào mừng đến với <br><span class="text-primary">Đồi Xuân 79</span></h1>
+                        <h5 class="section-about-title pe-3">Dịch vụ giải trí của chúng tôi</h5>
+                        <p class="mb-4">  Khu du lịch của chúng tôi mang đến trải nghiệm giải trí đa dạng, từ sân Pickleball hiện đại, 
+                            khu vui chơi trẻ em đầy màu sắc, đến quán cà phê ven hồ thư giãn. Đặc biệt, các dịch vụ như cắm trại, 
+                            và các hoạt động ngoài trời khác giúp bạn và gia đình có một kỳ nghỉ tràn đầy niềm vui và năng lượng. 
+                            Hãy đến để khám phá và tận hưởng những khoảnh khắc đáng nhớ cùng chúng tôi!"</p>
+                        
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Khách sạn và khu nghỉ dưỡng sang trọng, mang đến sự thoải mái tối đa.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Mọi dịch vụ đều được thiết kế theo nhu cầu riêng của bạn, đảm bảo sự hài lòng tuyệt đối.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Đội ngũ chuyên nghiệp, luôn sẵn sàng lắng nghe và giải quyết mọi yêu cầu của bạn bất cứ lúc nào.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Các tour du lịch được lên kế hoạch tỉ mỉ, đảm bảo bạn không bỏ lỡ bất kỳ trải nghiệm đáng nhớ nào.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Nhà hàng và khu vực giải trí được tuyển chọn kỹ lưỡng, mang lại không gian thư giãn đỉnh cao.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Dịch vụ vận chuyển tiện nghi, sẵn sàng phục vụ mọi hành trình của bạn.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- About End -->
+
+
+    <!-- Sân chơi Pickleball -->
+    <div class="container-fluid destination py-2">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h1 class="mb-0">Sân chơi Pickleball</h1>
+            </div>
+            <div class="tab-class text-center">
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-xl-8">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid  w-100 image-effect" src="{% static 'doixuan/assets/img/dichvu/giaitri/pickleball1.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid w-100 image-effect" src="{% static 'doixuan/assets/img/dichvu/giaitri/giaitri5.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid  w-100 image-effect" src="{% static 'doixuan/assets/img/dichvu/giaitri/giaitri4.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="destination-img">
+                                            <img class="img-fluid w-100 image-effect" src="{% static 'doixuan/assets/img/dichvu/giaitri/giaitri3.jpg' %}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="destination-img h-100">
+                                    <img class="img-fluid w-100 h-100 image-effect" src="{% static 'doixuan/assets/img/dichvu/giaitri/pickleball2.jpg' %}" style="object-fit: cover; min-height: 300px;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Sân chơi Pickleball -->
+
+    <!-- Sân chơi trẻ em -->
+    <div class="container-fluid ExploreTour py-2">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h1 class="mb-4">Sân chơi trẻ em</h1>
+                <p class="mb-0">Sân chơi trẻ em tại khu du lịch của chúng tôi là một không gian đầy màu sắc và vui nhộn, 
+                    nơi các bé có thể thỏa sức khám phá và vui chơi. Với các trò chơi an toàn như cầu trượt, xích đu, 
+                    nhà bóng và khu vực leo núi nhỏ, chúng tôi cam kết mang đến cho các bé những giờ phút thư giãn và 
+                    tràn ngập tiếng cười. Đội ngũ nhân viên tận tâm luôn sẵn sàng hỗ trợ để đảm bảo sự an toàn và niềm vui 
+                    cho các bé trong suốt thời gian vui chơi.
+                </p>
+            </div>
+            <div class="tab-class text-center">
+                
+                <div class="tab-content">
+                    <div id="NationalTab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="national-item">
+                                    <img src="{% static 'doixuan/assets/img/dichvu/giaitri/vuichoi1.png' %}" class="img-fluid w-100 image-effect" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="national-item">
+                                    <img src="{% static 'doixuan/assets/img/dichvu/giaitri/vuichoi2.jpg' %}" class="img-fluid w-100 image-effect" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="national-item">
+                                    <img src="{% static 'doixuan/assets/img/dichvu/giaitri/vuichoi3.jpg' %}" class="img-fluid w-100 image-effect" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sân chơi trẻ em -->
+
+
+    <!-- Sân khấu ca nhạc -->
+    <div class="container-fluid gallery py-2 my-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h1 class="mb-4">Sân khấu ca nhạc</h1>
+            <p class="mb-0">Sân khấu ca nhạc tại khu du lịch của chúng tôi là nơi hội tụ những giai điệu tuyệt vời và 
+                không gian trình diễn sôi động. Với hệ thống âm thanh và ánh sáng hiện đại, sân khấu mang đến những 
+                buổi biểu diễn ấn tượng, từ các chương trình ca nhạc sống động đến các sự kiện văn hóa đặc sắc. 
+                Đây là nơi lý tưởng để bạn và gia đình thưởng thức nghệ thuật và trải nghiệm những khoảnh khắc khó quên bên bạn bè 
+                và người thân.
+            </p>
+        </div>
+        <div class="tab-class text-center">
+            
+            <div class="tab-content">
+                <div class="tab-pane fade show p-0 active">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="gallery-item h-100">
+                                <img src="{% static 'doixuan/assets/img/dichvu/giaitri/sankhau4.jpg' %}" class="img-fluid w-100 h-100 image-effect" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="gallery-item h-100">
+                                <img src="{% static 'doixuan/assets/img/dichvu/giaitri/sankhau2.jpg' %}" class="img-fluid w-100 h-100 image-effect" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="gallery-item h-100">
+                                <img src="{% static 'doixuan/assets/img/dichvu/giaitri/sankhau3.jpg' %}" class="img-fluid w-100 h-100 image-effect" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+    <!-- Tour Booking Start -->
+    <div class="container-fluid booking py-5">
+        <div class="container py-5">
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <a class="btn btn-primary text-white w-100 py-3" href="{% url 'doixuan79:booking' %}">Đăng ký ngay</a>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+    <!-- Tour Booking End -->
+
+    
+</body>
+
+
+{% endblock %}

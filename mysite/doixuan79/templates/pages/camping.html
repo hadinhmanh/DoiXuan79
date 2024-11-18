@@ -1,0 +1,200 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Header Section */
+    .header-section {
+        position: relative;
+        background-image: url('{% static 'doixuan/assets/img/dichvu/camping/camp8.jpg' %}'); /* Thay link ảnh banner tại đây */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Hiệu ứng mờ */
+        z-index: 0;
+    }
+    .header-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        z-index: 1;
+        color:white;
+        position: relative;
+    }
+    .header-section p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        z-index: 1;
+        position: relative;
+    }
+    .header-section .btn {
+        z-index: 1;
+        position: relative;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #2e7d32;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .header-section .btn:hover {
+        background-color: #43a047;
+    }
+
+    .features {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .features i {
+        font-size: 2.5rem;
+        color: #4caf50;
+        margin-bottom: 1rem;
+    }
+
+    .features h5 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .features p {
+        font-size: 0.95rem;
+        color: #6c757d;
+    }
+
+    .gallery img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <section class="header-section">
+        <h1>Khám phá Đồi 79 Mùa Xuân</h1>
+        <p>Trải nghiệm không gian xanh mát, lịch sử và văn hóa đặc sắc</p>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Về Khu Du Lịch Camping</h2>
+            <p class="text-center">
+                Khu du lịch camping của chúng tôi nằm giữa thiên nhiên hoang sơ, mang đến cho bạn cơ hội tận hưởng không gian yên bình, trong lành. Với các tiện nghi hiện đại và nhiều hoạt động thú vị, đây là điểm đến lý tưởng cho gia đình, bạn bè và các nhóm yêu thiên nhiên.
+            </p>
+        </div>
+    </section>
+
+    <!-- Thư viện ảnh -->
+    <section class="features bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <i class="fas fa-cloud"></i>
+                    <h5>Ở trong mọi điều kiện</h5>
+                    <p>Tận hưởng cắm trại quanh năm với các tiện nghi phù hợp mọi thời tiết.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-users"></i>
+                    <h5>Sẵn sàng mọi lúc, mọi nơi</h5>
+                    <p>Đội ngũ chuyên nghiệp của chúng tôi luôn đảm bảo trải nghiệm tốt nhất.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-hiking"></i>
+                    <h5>Khám phá thiên nhiên</h5>
+                    <p>Trải nghiệm không gian theien nhiên hoang sơ, hòa mình vào bầu không khí trong lành.</p>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-compass"></i>
+                    <h5>Điểm đến lý tưởng</h5>
+                    <p>Nơi hoàn hảo để tận hưởng những phút giây thư giãn và khám phá thiên nhiên</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần Thư Viện Ảnh -->
+    <section class="gallery py-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="{% static 'doixuan/assets/img/dichvu/camping/camp2.jpeg' %}" class="img-fluid" alt="Gallery Image 1">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="{% static 'doixuan/assets/img/dichvu/camping/camp3.webp' %}" class="img-fluid" alt="Gallery Image 2">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="{% static 'doixuan/assets/img/dichvu/camping/camp4.jpg' %}" class="img-fluid" alt="Gallery Image 3">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="{% static 'doixuan/assets/img/dichvu/camping/camp5.jpg' %}" class="img-fluid" alt="Gallery Image 4">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="{% static 'doixuan/assets/img/dichvu/camping/camp6.jpg' %}" class="img-fluid" alt="Gallery Image 5">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="{% static 'doixuan/assets/img/dichvu/camping/camp7.jpg' %}" class="img-fluid" alt="Gallery Image 6">
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Dịch vụ & Hoạt động -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Dịch Vụ & Hoạt Động</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen5.jpg' %}" class="card-img-top" alt="Hoạt động 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Chèo thuyền</h5>
+                            <p class="card-text">Thư giãn trên dòng nước yên bình, tận hưởng cảnh sắc xung quanh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static 'doixuan/assets/img/dichvu/camping/camp12.jpg' %}" class="card-img-top" alt="Hoạt động 2">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Nấu ăn ngoài trời</h5>
+                            <p class="card-text">Trổ tài nấu ăn trong không gian ngoài trời, với bếp lửa và nguyên liệu tươi ngon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static 'doixuan/assets/img/dichvu/camping/camp11.jpg' %}" class="card-img-top" alt="Hoạt động 3">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Đốt Lửa Trại</h5>
+                            <p class="card-text">Tham gia các buổi lửa trại với âm nhạc, trò chơi và kết nối.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+{% endblock %}

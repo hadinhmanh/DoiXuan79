@@ -1,0 +1,495 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+
+{% comment %} bắt đầu banner {% endcomment %}
+<!-- Banner Section -->
+<div class="banner">
+    <div class="container">
+        <h1>Sự kiện và Trải nghiệm</h1>
+        <p>Khám phá những lễ hội thiên nhiên và sự kiện xanh mát.</p>
+        <a href="#events" class="btn">Khám Phá Ngay</a>
+    </div>
+</div>
+<style>
+    /* CSS */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f3f9f3;
+    }
+
+    /* Banner Section */
+    .banner {
+        position: relative;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(50, 50, 50, 0.3)), 
+        url('{% static 'doixuan/assets/img/sukien/a.webp' %}') center/cover no-repeat;
+
+        height: 70vh;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+
+    .banner h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: #f8f9fa;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .banner p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .banner .btn {
+        font-size: 1.2rem;
+        padding: 12px 40px;
+        font-weight: bold;
+        background: #8bc34a;
+        color: white;
+        border: none;
+        transition: background 0.3s ease;
+    }
+
+    .banner .btn:hover {
+        background: #43a047;
+    }
+
+    /* Event Section */
+    .event-section {
+        padding: 70px 0;
+        background: #e8f5e9;
+    }
+
+    .event-section h2 {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: #388e3c;
+    }
+
+    .event-card {
+        background: linear-gradient(135deg, #c8e6c9, #e8f5e9);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+    }
+
+    .event-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .event-card .event-content {
+        padding: 20px;
+    }
+
+    .event-card h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #388e3c;
+    }
+
+    .event-card p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .event-card .btn {
+        margin-top: 15px;
+        font-size: 1rem;
+        background: #8bc34a;
+        color: white;
+        border: none;
+    }
+
+    .event-card .btn:hover {
+        background: #43a047;
+    }
+</style>
+<!-- Sự kiện nổi bật Section -->
+<section id="events" class="event-section">
+    <div class="container">
+        <h2>Các Sự Kiện Nổi Bật Tháng</h2>
+        <div class="row g-4">
+            <!-- Sự kiện 1 -->
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="{% static 'doixuan/assets/img/sukien/a1.webp' %}" alt="Lễ Hội Âm Nhạc">
+                    <div class="event-content">
+                        <h5>Lễ Hội Âm Nhạc</h5>
+                        <p>Trải nghiệm không gian âm nhạc sôi động giữa thiên nhiên xanh mát.</p>
+                        <a href="#" class="btn">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sự kiện 2 -->
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="{% static 'doixuan/assets/img/sukien/a2.webp' %}" alt="Ẩm Thực Đường Phố">
+                    <div class="event-content">
+                        <h5>Ẩm Thực Đường Phố</h5>
+                        <p>Khám phá hương vị độc đáo từ các quầy hàng ẩm thực xanh.</p>
+                        <a href="#" class="btn">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sự kiện 3 -->
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="{% static 'doixuan/assets/img/sukien/a3.webp' %}" alt="Hóa Trang Lễ Hội">
+                    <div class="event-content">
+                        <h5>Hóa Trang Lễ Hội</h5>
+                        <p>Tham gia lễ hội hóa trang đầy sắc màu và thân thiện với môi trường.</p>
+                        <a href="#" class="btn">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sự kiện 4 -->
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="{% static 'doixuan/assets/img/sukien/a4.webp' %}" alt="Lễ Hội Hoa">
+                    <div class="event-content">
+                        <h5>Lễ Hội Hoa</h5>
+                        <p>Chiêm ngưỡng vẻ đẹp của các loài hoa trong không gian xanh tươi.</p>
+                        <a href="#" class="btn">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sự kiện 5 -->
+            <div class="col-md-4">
+                <div class="event-card">
+                    <img src="{% static 'doixuan/assets/img/sukien/a5.webp' %}" alt="Lễ Hội Đèn Lồng">
+                    <div class="event-content">
+                        <h5>Lễ Hội Đèn Lồng</h5>
+                        <p>Hòa mình vào không gian ánh sáng từ những chiếc đèn lồng xanh.</p>
+                        <a href="#" class="btn">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Events Start -->
+ <div class="container-fluid event py-5">
+    <div class="container py-5">
+        <h1 class="display-3 mb-5 wow fadeIn" data-wow-delay="0.1s">Hàng Ngàn Lễ Hội <span class="text-primary">Hấp Dẫn</span></h1>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Dịp Tết Nguyên Đán</h6>
+                    <p class="mb-0">Full Time</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Tết Nguyên Đán - Lễ Hội Xuân</h4>
+                    <p class="mb-4">Lễ Hội Xuân chào đón năm mới với không khí rộn ràng qua các hoạt động như múa lân, gói bánh chưng,
+                         trang trí cây mai, cây đào, và lì xì may mắn. Ngoài ra, các gian hàng ẩm thực và đồ thủ công truyền thống tạo nên không gian náo nhiệt.
+                         Chương trình văn nghệ Xuân với sự góp mặt của các nghệ sĩ nổi tiếng mang lại niềm vui và khởi đầu tràn đầy năng lượng. </p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Lễ Hội</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk1.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.3s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Ngày 14 Tháng 2 </h6>
+                    <p class="mb-0">Từ 8:00 đến 23:00</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Lễ Tình Nhân – 14/2</h4>
+                    <p class="mb-4">Sự kiện ngập tràn cảm xúc dành cho các cặp đôi, với không gian trang trí lãng mạn gồm nến,
+                         hoa và âm nhạc. Các hoạt động nổi bật như thi viết lời chúc tình yêu, trao đổi
+                         quà tặng và tổ chức bữa tiệc tối dưới ánh đèn lung linh giúp mọi người tận hưởng trọn vẹn không khí Valentine.</p>
+                    <a href="#" class="btn btn-primary px-3">Join Now</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk2.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.5s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Ngày 8 Tháng 3</h6>
+                    <p class="mb-0">Từ 8:00 đến 23:00</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Ngày Quốc Tế Phụ Nữ</h4>
+                    <p class="mb-4">Ngày Quốc tế Phụ nữ (8/3) diễn ra với các hoạt động tôn vinh phái đẹp qua các chương trình văn nghệ,
+                         tặng hoa, và các buổi hội thảo chia sẻ bí quyết chăm sóc sức khỏe, sắc đẹp. Ngày Cá Tháng Tư (1/4)
+                         mang đến không khí vui vẻ, hài hước với các trò chơi sáng tạo, những câu đố vui nhộn và nhiều phần quà bất ngờ.</p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Sự Kiện</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk3.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Ngày Lễ 30/4 & 01/5</h6>
+                    <p class="mb-0">Full Time</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Kỷ niệm Giải phóng miền Nam và Quốc tế Lao động</h4>
+                    <p class="mb-4">Kỷ niệm Giải phóng miền Nam và Quốc tế Lao động với các buổi diễu hành, 
+                        chương trình văn nghệ, và hội chợ tôn vinh người lao động. Hoạt động ngoài trời như hội thi thể thao, 
+                        trò chơi dân gian và bắn pháo hoa vào buổi tối là điểm nhấn của sự kiện này. </p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Lễ Hội</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk4.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Ngày 01 Tháng 06</h6>
+                    <p class="mb-0">Từ 17:30 Đến 22:00</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Quốc tế Thiếu nhi</h4>
+                    <p class="mb-4">Ngày hội của trẻ em với các trò chơi sáng tạo, biểu diễn xiếc, ảo thuật và các tiết mục ca múa nhạc
+                         thiếu nhi. Không gian hội chợ với nhiều gian hàng đồ chơi,
+                         sách thiếu nhi, và quầy ẩm thực giúp các bé có một ngày đầy ắp niềm vui và ý nghĩa. </p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Lễ Hội</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk5.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Từ Tháng 6 Đến 8.</h6>
+                    <p class="mb-0">Full Time</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Mùa Hè – Trại Hè và Khóa Tu</h4>
+                    <p class="mb-4">Mùa hè sôi động với các hoạt động như Trại Hè, nơi trẻ em và thanh thiếu niên được tham gia các trò chơi
+                         nhóm, học kỹ năng sống, làm đồ thủ công và dã ngoại khám phá thiên nhiên. Khóa Tu mùa hè mang 
+                        đến không gian tĩnh tâm với các hoạt động như thiền, học giáo lý, và các chương trình thiện nguyện hướng về cộng đồng. </p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Lễ Hội</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk6.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Ngày 2 Tháng 9</h6>
+                    <p class="mb-0">Full Time</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Quốc khánh Việt Nam</h4>
+                    <p class="mb-4">Ngày lễ Quốc khánh với các hoạt động như diễu hành, triển lãm lịch sử và bắn pháo hoa hoành tráng. 
+                        Các chương trình văn nghệ mang đậm tinh 
+                        thần yêu nước và các hội chợ ẩm thực truyền thống cũng là điểm nhấn thu hút đông đảo người tham gia. </p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Lễ Hội</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk7.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 event-item wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-3 col-lg-2 pe-0">
+                <div class="text-center border-bottom border-dark py-3 px-2">
+                    <h6>Ngày 24 Tháng 12 và Tết Dương</h6>
+                    <p class="mb-0">Từ 8:00 Đến 23:30</p>
+                </div>
+            </div>
+            <div class="col-9 col-lg-6 border-start border-dark pb-5">
+                <div class="ms-3">
+                    <h4 class="mb-3">Lễ Noel & Tết Tây</h4>
+                    <p class="mb-4">Lễ Noel (24/12) diễn ra trong không gian trang trí ấm áp với cây thông,
+                         ông già Noel phát quà, và các buổi hòa nhạc Giáng Sinh. Tết Tây (31/12)
+                         rộn ràng với chương trình đếm ngược, bắn pháo hoa và tiệc ngoài trời náo nhiệt đón chào năm mới. </p>
+                    <a href="#" class="btn btn-primary px-3">Chi Tiết Lễ Hội</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="overflow-hidden mb-5">
+                    <img style="border-radius:30px" src="{% static 'doixuan/assets/img/sukien/sk10.webp' %}" class="img-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="fireworks-canvas"></canvas>
+</div>
+
+
+
+
+<section class="experience-section green-section">
+    <div class="experience-text">
+        <h2>Trải Nghiệm Tuyệt Vời</h2>
+        <p>
+            Cùng hòa mình vào <span class="highlight">thiên nhiên xanh mát</span>, tận hưởng không gian thanh bình và đầy năng lượng tích cực. 
+            Hãy cảm nhận <span class="highlight">sự yên bình</span> và vẻ đẹp không thể nào quên của nơi đây.
+        </p>
+        <p>
+            Đây là nơi hoàn hảo để thư giãn, tạo kỷ niệm đẹp và khám phá sự kết nối kỳ diệu giữa bạn và thiên nhiên.
+        </p>
+    </div>
+</section>
+
+<!-- White Section -->
+<section class="experience-section white-section">
+    <div class="images-container">
+        <div class="image-item">
+            <img src="{% static 'doixuan/assets/img/sukien/b1.jpg' %}" alt="Dạo bước thiên nhiên">
+            <div class="image-caption">Dạo Bước Thiên Nhiên</div>
+        </div>
+        <div class="image-item">
+            <img src="{% static 'doixuan/assets/img/sukien/b7.webp' %}" alt="Picnic gia đình">
+            <div class="image-caption">Picnic Gia Đình</div>
+        </div>
+        <div class="image-item">
+            <img src="{% static 'doixuan/assets/img/sukien/b3.webp' %}" alt="Ánh sáng lung linh">
+            <div class="image-caption">Ánh Sáng Lung Linh</div>
+        </div>
+        <div class="image-item">
+            <img src="{% static 'doixuan/assets/img/sukien/b6.webp' %}" alt="Vườn hoa tươi sắc">
+            <div class="image-caption">Vườn Hoa Tươi Sắc</div>
+        </div>
+        <div class="image-item">
+            <img src="{% static 'doixuan/assets/img/sukien/b5.webp' %}" alt="Hồ nước bình yên">
+            <div class="image-caption">Hồ Nước Bình Yên</div>
+        </div>
+    </div>
+</section>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+    .experience-section {
+        padding: 60px 20px;
+    }
+    .green-section {
+        background-color: #e8f5e9;
+        color: #1b5e20;
+    }
+    .white-section {
+        background-color: #ffffff;
+        color: #2e7d32;
+    }
+    .experience-text {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .experience-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #004d40;
+    }
+    .experience-text p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        color: #00695c;
+    }
+    .highlight {
+        color: #388e3c;
+        font-weight: bold;
+    }
+    .images-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .image-item {
+        position: relative;
+        flex: 1 1 calc(30% - 20px);
+        min-width: 280px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .image-caption {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+{% endblock %}

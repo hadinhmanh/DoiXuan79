@@ -1,0 +1,304 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+
+<style> 
+    /* Hero Section */
+.hero {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-overlay p {
+    font-size: 1.5rem;
+}
+
+/* Intro Section */
+.intro {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Programs Section */
+.programs {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.programs h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.program-card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.program-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover img {
+    transform: scale(1.05);
+}
+
+.program-info {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.program-info h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.program-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.gallery h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+/* Tạo hiệu ứng khi di chuột qua ảnh */
+.photo-item {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.photo-img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.photo-item:hover .photo-img {
+    transform: scale(1.1); /* Phóng to ảnh */
+    filter: brightness(80%); /* Làm tối ảnh */
+}
+
+.photo-overlay {
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.photo-item:hover .photo-overlay {
+    opacity: 1; /* Hiển thị thông tin địa điểm khi di chuột */
+}
+
+</style>
+<div class="hero">
+    <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu ca nhạc" class="hero-image">
+    <div class="hero-overlay">
+        <h1>Chào mừng đến với sân khấu ca nhạc</h1>
+        <p>Không gian biểu diễn đỉnh cao cho mọi sự kiện âm nhạc</p>
+    </div>
+</div>
+
+<section class="intro">
+    <h2>Về Sân Khấu Ca Nhạc</h2>
+    <p>Sân khấu ca nhạc của chúng tôi mang đến không gian âm nhạc sống động và đẳng cấp, nơi bạn có thể thưởng thức những buổi biểu diễn tuyệt vời nhất từ các nghệ sĩ tài năng trong và ngoài nước.</p>
+    <p>Được trang bị công nghệ âm thanh, ánh sáng hiện đại, sân khấu hứa hẹn mang đến những trải nghiệm âm nhạc tuyệt vời cho khán giả.</p>
+</section>
+
+<section class="programs py-5">
+    <div class="container">
+        <h3 class="text-center mb-4">Các Chương Trình Biểu Diễn</h3>
+        <div class="row g-4">
+            <!-- Chương trình 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="card-img-top" alt="Chương trình 1">
+                    <div class="card-body">
+                        <h4 class="card-title">Chương Trình Biểu Diễn Số 1</h4>
+                        <p class="card-text">Một đêm nhạc rock sôi động, với những màn trình diễn đầy năng lượng.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Chương trình 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="card-img-top" alt="Chương trình 2">
+                    <div class="card-body">
+                        <h4 class="card-title">Chương Trình Biểu Diễn Số 2</h4>
+                        <p class="card-text">Chương trình âm nhạc cổ điển, mang đến không gian thư giãn và lắng đọng.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Chương trình 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="card-img-top" alt="Chương trình 3">
+                    <div class="card-body">
+                        <h4 class="card-title">Chương Trình Biểu Diễn Số 3</h4>
+                        <p class="card-text">Đêm nhạc acoustic ấm áp, dành cho những ai yêu thích không gian nhẹ nhàng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="gallery">
+    <h3>Hình Ảnh Sân Khấu</h3>
+    <div class="gallery-grid">
+        <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu 1">
+        <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu 2">
+        <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu 3">
+        <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu 4">
+        <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu 5">
+        <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="Sân khấu 6">
+    </div>
+</section>
+
+
+<div class="container my-5">
+    <div class="row g-3">
+        <!-- Ảnh lớn -->
+        <div class="col-12 col-md-6">
+            <div class="photo-item position-relative overflow-hidden">
+                <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="img-fluid rounded photo-img" alt="Thailand">
+                <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-2 text-white bg-opacity-75 bg-success text-center">
+                    Cafe
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ảnh nhỏ -->
+        <div class="col-6 col-md-3">
+            <div class="photo-item position-relative overflow-hidden">
+                <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="img-fluid rounded photo-img" alt="Indonesia">
+                <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-2 text-white bg-opacity-75 bg-success text-center">
+                    Cafe
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ảnh vừa 1 -->
+        <div class="col-6 col-md-3">
+            <div class="photo-item position-relative overflow-hidden">
+                <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="img-fluid rounded photo-img" alt="Malaysia">
+                <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-2 text-white bg-opacity-75 bg-success text-center">
+                    Cafe
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="photo-item position-relative overflow-hidden">
+                <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="img-fluid rounded photo-img" alt="Malaysia">
+                <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-2 text-white bg-opacity-75 bg-success text-center">
+                    Cafe
+                </div>
+            </div>
+        </div>
+        <!-- Ảnh vừa 2 -->
+        <div class="col-6 col-md-3">
+            <div class="photo-item position-relative overflow-hidden">
+                <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="img-fluid rounded photo-img" alt="Australia">
+                <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-2 text-white bg-opacity-75 bg-success text-center">
+                    Cafe
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="photo-item position-relative overflow-hidden">
+                <img src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" class="img-fluid rounded photo-img" alt="Thailand">
+                <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-2 text-white bg-opacity-75 bg-success text-center">
+                    Cafe
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

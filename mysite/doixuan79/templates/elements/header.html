@@ -1,0 +1,71 @@
+{% load static %}
+<!-- Spinner Start -->
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>Đồi Xuân, Mê Linh, Hà Nội</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 9.00 AM - 6.00 PM</small>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small>0982548792</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <a href="{% url 'doixuan79:index' %}" class="navbar-brand p-0">
+        <img class="img-fluid me-3" src="{% static 'doixuan/assets/img/logo.jpg' %}" alt="Icon">
+        <h1 class="m-0 text-primary"></h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+            <a href="{% url 'doixuan79:index' %}" class="nav-item nav-link active">Trang chủ</a>
+            <a href="{% url 'doixuan79:about' %}" class="nav-item nav-link">Giới thiệu</a>
+            <a href="{% url 'doixuan79:sukien' %}" class="nav-item nav-link">Sự kiện và Trải nghiệm</a>
+            <a href="{% url 'doixuan79:booking' %}" class="nav-item nav-link">Đặt chỗ/Booking</a>
+            <div class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dịch vụ</a>
+                <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                    <a href="{% url 'doixuan79:launuong' %}" class="dropdown-item">Buffet Lẩu Nướng</a>
+                    <a href="{% url 'doixuan79:cafe' %}" class="dropdown-item">Quán Cafe</a>
+                    <a href="{% url 'doixuan79:cheothuyen' %}" class="dropdown-item">Chèo thuyền Kayak</a>
+                    <a href="{% url 'doixuan79:camping' %}" class="dropdown-item">Camping</a>
+                    <a href="{% url 'doixuan79:vuichoi' %}" class="dropdown-item">Giải trí khác</a>
+                </div>
+            </div>
+            <a href="{% url 'doixuan79:blog' %}" class="nav-item nav-link">Blog</a>
+            <a href="{% url 'doixuan79:lienhe' %}" class="nav-item nav-link">Liên hệ</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->

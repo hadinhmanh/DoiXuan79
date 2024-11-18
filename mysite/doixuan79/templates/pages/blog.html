@@ -1,0 +1,477 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+<!-- Header Section -->
+<section class="header-section">
+    <h1>Khám phá Đồi 79 Mùa Xuân</h1>
+    <p>Trải nghiệm không gian xanh mát, lịch sử và văn hóa đặc sắc</p>
+    <a href="#blog" class="btn">Khám phá ngay</a>
+</section>
+
+<!-- Blog Container -->
+<div class="blog-container" id="blog">
+    <!-- Blog Posts -->
+    <div>
+        <div class="blog-post">
+            <img src="https://via.placeholder.com/600x400" alt="Đồi 79 Mùa Xuân">
+            <div class="blog-post-content">
+                <h2>Đồi 79 Mùa Xuân - di tích lưu niệm Chủ tịch Hồ Chí Minh</h2>
+                <p>Đồi 79 Mùa xuân thuộc xã Thanh Lâm, huyện Mê Linh, Hà Nội. Vào năm 1971, nhân dân huyện Yên Lãng (cũ) đã công đức những đồ thờ quý giá để đúc tượng đài Hồ Chí Minh...</p>
+                <div class="meta-info">Phương Anh (t/h) | 21/12/2022 16:30</div>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <img src="https://via.placeholder.com/600x400" alt="Kinh nghiệm khám phá khu du lịch">
+            <div class="blog-post-content">
+                <h2>Kinh nghiệm khám phá Đồi 79 Mùa Xuân</h2>
+                <p>Với những yếu tố tự nhiên phong phú, Đồi 79 Mùa Xuân là điểm đến lý tưởng cho các hoạt động khám phá, du lịch tâm linh và nghỉ dưỡng...</p>
+                <div class="meta-info">Tác giả: Admin | Ngày: 15/11/2023</div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h3>Danh mục</h3>
+        <ul class="category-list">
+            <li><a href="#">Tin tức mới nhất</a></li>
+            <li><a href="#">Mẹo du lịch</a></li>
+            <li><a href="#">Hoạt động tâm linh</a></li>
+            <li><a href="#">Khám phá thiên nhiên</a></li>
+            <li><a href="#">Ẩm thực địa phương</a></li>
+        </ul>
+    </aside>
+</div>
+<section class="related-section">
+    <h2>CÓ THỂ BẠN QUAN TÂM</h2>
+    <div class="related-container">
+        <!-- Card 1 -->
+        <div class="related-card">
+            <img src="https://via.placeholder.com/400x200" alt="Tìm kiếm bài hát yêu thích">
+            <div class="related-card-body">
+                <h5>Tìm Kiếm Bài Hát Yêu Thích</h5>
+                <p>Trải nghiệm chức năng tìm kiếm bài hát nhanh chóng và chính xác.</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="related-card">
+            <img src="https://via.placeholder.com/400x200" alt="Đặt phòng karaoke trực tuyến">
+            <div class="related-card-body">
+                <h5>Đặt Phòng Karaoke Online</h5>
+                <p>Đặt phòng dễ dàng chỉ với vài thao tác trên web.</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="related-card">
+            <img src="https://via.placeholder.com/400x200" alt="Khuyến mãi tuần này">
+            <div class="related-card-body">
+                <h5>Khuyến Mãi Tuần Này</h5>
+                <p>Khám phá các ưu đãi đặc biệt khi đặt phòng trước.</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="related-card">
+            <img src="https://via.placeholder.com/400x200" alt="Top bài hát phổ biến">
+            <div class="related-card-body">
+                <h5>Top Bài Hát Phổ Biến</h5>
+                <p>Cập nhật nhanh các bài hát được yêu thích nhất tại karaoke.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    /* Header Section */
+    .header-section {
+        position: relative;
+        background-image: url('{% static 'doixuan/assets/img/sukien/c1.jpg' %}'); /* Thay link ảnh banner tại đây */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Hiệu ứng mờ */
+        z-index: 0;
+    }
+    .header-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        z-index: 1;
+        color:white;
+        position: relative;
+    }
+    .header-section p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        z-index: 1;
+        position: relative;
+    }
+    .header-section .btn {
+        z-index: 1;
+        position: relative;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #2e7d32;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .header-section .btn:hover {
+        background-color: #43a047;
+    }
+
+    /* Blog Container */
+    .blog-container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+    }
+
+    /* Blog Post */
+    .blog-post {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-post:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .blog-post img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+    .blog-post-content {
+        flex: 1;
+        padding: 15px;
+    }
+    .blog-post-content h2 {
+        font-size: 1.5rem;
+        color: #2e7d32;
+    }
+    .blog-post-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 10px;
+        color: #555;
+    }
+    .blog-post-content .meta-info {
+        font-size: 0.85rem;
+        color: #777;
+        margin-top: 10px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background-color: #e8f5e9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar h3 {
+        color: #1b5e20;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    .category-list {
+        list-style: none;
+        padding: 0;
+    }
+    .category-list li {
+        margin-bottom: 10px;
+    }
+    .category-list a {
+        text-decoration: none;
+        color: #388e3c;
+        font-weight: bold;
+        transition: color 0.2s ease;
+    }
+    .category-list a:hover {
+        color: #1b5e20;
+    }
+    /* Section Gợi Ý */
+    .related-section {
+        padding: 60px 20px;
+        background: linear-gradient(180deg, #f9f9f9, #e8f5e9);
+    }
+    .related-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2e7d32;
+        font-weight: bold;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+    .related-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    /* Card Styles */
+    .related-card {
+        position: relative;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .related-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .related-card-body {
+        padding: 20px;
+        text-align: center;
+    }
+    .related-card-body h5 {
+        font-size: 1.2rem;
+        color: #2e7d32;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .related-card-body p {
+        font-size: 1rem;
+        color: #666;
+    }
+    /* Add a subtle decorative element */
+    .related-card-body::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: #2e7d32;
+        margin: 0 auto 15px;
+        border-radius: 2px;
+    }
+    /* Media Queries for Mobile */
+    @media screen and (max-width: 768px) {
+        /* Blog Container */
+        .blog-container {
+            display: grid;
+            grid-template-columns: 7fr 3fr; /* Tỉ lệ 7:3 */
+            gap: 10px;
+            align-items: start;
+        }
+
+        /* Blog Post */
+        .blog-post {
+            flex-direction: row; /* Giữ nguyên dạng hàng ngang */
+            gap: 10px;
+        }
+        .blog-post img {
+            width: 100px; /* Kích thước nhỏ hơn cho ảnh trên mobile */
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .blog-post-content {
+            padding: 5px;
+        }
+        .blog-post-content h2 {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        .blog-post-content p {
+            font-size: 0.85rem;
+            line-height: 1.3;
+            color: #666;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Hiển thị tối đa 3 dòng văn bản */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .blog-post-content .meta-info {
+            font-size: 0.7rem;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            padding: 10px;
+            background-color: #f4f9f4;
+            box-shadow: none; /* Giảm hiệu ứng shadow cho mobile */
+        }
+        .sidebar h3 {
+            font-size: 1rem;
+        }
+        .category-list a {
+            font-size: 0.9rem;
+        }
+    }
+    .blog-post {
+        display: flex; /* Hiển thị theo hàng ngang */
+        align-items: flex-start; /* Canh đầu hàng */
+        gap: 10px; /* Khoảng cách giữa ảnh và nội dung */
+        margin-bottom: 15px; /* Khoảng cách giữa các khối tin tức */
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 10px; /* Thêm padding để nội dung không chạm sát */
+    }
+
+    .blog-post img {
+        width: 30%; /* Hình ảnh chiếm 30% chiều ngang */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        object-fit: cover;
+        margin: 0; /* Bám sát lề */
+        border-radius: 5px; /* Bo nhẹ góc cho ảnh */
+    }
+
+    .blog-post-content {
+        flex: 1; /* Nội dung chiếm không gian còn lại */
+        padding: 0; /* Loại bỏ padding mặc định */
+    }
+
+    .blog-post-content h2 {
+        font-size: 1rem;
+        margin: 0; /* Đưa tiêu đề sát với phần nội dung */
+    }
+
+    .blog-post-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-top: 5px; /* Tạo khoảng cách nhỏ dưới tiêu đề */
+        color: #666;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Hiển thị tối đa 3 dòng văn bản */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .blog-post-content .meta-info {
+        margin-top: 5px;
+        font-size: 0.75rem;
+        color: #999;
+    }
+
+    /* Media Queries for Smaller Mobile Devices */
+    @media screen and (max-width: 480px) {
+        .blog-container {
+            grid-template-columns: 7fr 3fr; /* Giữ tỉ lệ 7:3 */
+            gap: 5px;
+        }
+        .blog-post img {
+            width: 80px;
+            height: 60px;
+        }
+        .blog-post-content h2 {
+            font-size: 0.9rem;
+        }
+        .blog-post-content p {
+            font-size: 0.8rem;
+        }
+        .sidebar h3 {
+            font-size: 0.9rem;
+        }
+        .category-list a {
+            font-size: 0.8rem;
+        }       
+    }
+    @media screen and (max-width: 768px) {
+        /* Related Section */
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 khối ngang, mỗi khối chiếm 1 phần */
+            gap: 10px; /* Khoảng cách giữa các khối */
+            align-items: center;
+            justify-items: center; /* Căn giữa nội dung bên trong */
+        }
+    
+        .related-card {
+            width: 100%; /* Đảm bảo khối nằm gọn trong cột */
+            height: auto; /* Tự điều chỉnh chiều cao */
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa nội dung bên trong */
+            justify-content: center;
+        }
+    
+        .related-card img {
+            width: 80%; /* Giảm kích thước hình ảnh để phù hợp màn hình nhỏ */
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    
+        .related-card-body {
+            text-align: center;
+            padding: 5px;
+        }
+    
+        .related-card-body h5 {
+            font-size: 0.85rem;
+            margin: 5px 0;
+            color: #2e7d32;
+        }
+    
+        .related-card-body p {
+            font-size: 0.75rem;
+            color: #666;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Hiển thị tối đa 2 dòng */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+    
+    /* Media Queries for Smaller Mobile Devices */
+    @media screen and (max-width: 480px) {
+        .related-container {
+            gap: 5px; /* Giảm khoảng cách giữa các khối trên màn hình nhỏ */
+        }
+    
+        .related-card img {
+            width: 70%; /* Giảm kích thước hình ảnh thêm cho màn hình nhỏ hơn */
+        }
+    
+        .related-card-body h5 {
+            font-size: 0.75rem;
+        }
+    
+        .related-card-body p {
+            font-size: 0.7rem;
+        }
+    }
+    
+    
+</style>
+{% endblock %}

@@ -1,0 +1,454 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-dark p-0 mb-5">
+    <div class="row g-0 flex-column-reverse flex-lg-row">
+        <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
+            <div class="header-bg h-100 d-flex flex-column justify-content-center p-5">
+                <h1 class="display-4 text-light mb-5">Đồi Xuân 79 - Nơi thiên nhiên và tâm hồn giao hòa</h1>
+                <div class="d-flex align-items-center pt-4 animated slideInDown">
+                    <a style="border-radius: 25px;" href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Xem Thêm</a>
+                    <button type="button" class="btn-play" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                    <h6 class="text-white m-0 ms-4 d-none d-sm-block">Video Giới Thiệu</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="owl-carousel header-carousel">
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'doixuan/assets/img/trangchu/anh1.jpg' %}" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'doixuan/assets/img/trangchu/anh2.jpg' %}" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'doixuan/assets/img/trangchu/anh3.jpg' %}" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'doixuan/assets/img/trangchu/anh4.jpg' %}" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'doixuan/assets/img/trangchu/anh5.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- Video Modal Start -->
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                        allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Modal End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p><span class="text-primary me-2">#</span>Welcome To 79 Spring Rerost</p>
+                <h1 class="display-5 mb-4">Những lý do nên ghé thăm <span class="text-primary">Đồi Xuân 79</span></h1>
+                <p class="mb-4">Đồi Xuân 79 không chỉ là một điểm đến nghỉ dưỡng đẳng cấp, 
+                    mà còn mang lại trải nghiệm tuyệt vời với các tiện ích hiện đại và không gian yên bình, hòa mình cùng thiên nhiên:</p>
+                <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Khu Resort 5 sao</h5>
+                <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Khu khách sạn 5 sao</h5>
+                <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Khu văn phòng</h5>
+                <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Trung tâm thương mại</h5>
+                <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Khu thể thao</h5>
+                <a style="border-radius: 25px;" class="btn btn-primary py-3 px-5 mt-3" href="">Xem Thêm</a>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="img-border">
+                    <img class="img-fluid" src="{% static 'doixuan/assets/img/trangchu/anh11.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Facts Start -->
+<div class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                <i class="fa fa-paw fa-3x text-primary mb-3"></i>
+                <h1 class="text-white mb-2" data-toggle="counter-up">9999</h1>
+                <p class="text-white mb-0">Lượt Khách</p>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                <h1 class="text-white mb-2" data-toggle="counter-up">578</h1>
+                <p class="text-white mb-0">Lượt Đặt</p>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+                <h1 class="text-white mb-2" data-toggle="counter-up">389</h1>
+                <p class="text-white mb-0">Lượt Đánh Giá</p>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
+                <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+                <p class="text-white mb-0">Lượt Thích</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facts End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <p><span class="text-primary me-2">#</span>Không gian xanh Đồi Xuân 79</p>
+                <h1 class="display-5 mb-0">Khám Phá Thiên Đường <span class="text-primary">Sinh Thái </span> Đồi Xuân 79</h1>
+            </div>
+            <div style="border-radius: 25px;" class="col-lg-6">
+                <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
+                    <i class="fa fa-3x fa-mobile-alt text-white"></i>
+                    <div class="ms-4">
+                        <p class="text-white mb-0">Liên Hệ Ngay Để Nhận Tư Vấn</p>
+                        <h2 class="text-white mb-0">0982548792</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-5 gx-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/trangchu/anh6.jpg' %}" alt="Icon">
+                <h5 class="mb-3">Khu Resort Sang Trọng </h5>
+                <span>Tận hưởng không gian nghỉ dưỡng đẳng cấp giữa thiên nhiên xanh mát tại Đồi Xuân 79.
+                     Các biệt thự và bungalow được thiết kế tinh tế, mang đến sự thoải mái tuyệt đối.
+                     Đây là nơi lý tưởng để tái tạo năng lượng và tận hưởng kỳ nghỉ đáng nhớ.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/dichvu/buffet/lau6.jpeg' %}" alt="Icon">
+                <h5 class="mb-3">Nhà Hàng & Quán Café Sang Trọng</h5>
+                <span>Thưởng thức những món ăn tinh hoa và đồ uống thượng hạng trong không gian ven hồ thoáng đãng. 
+                    Sự kết hợp giữa hương vị độc đáo và thiết kế sang trọng mang đến trải nghiệm ẩm thực hoàn hảo.
+                     Đừng quên tận hưởng bầu không khí trong lành khi dừng chân tại đây.
+                </span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/trangchu/anh14.jpg' %}" alt="Icon">
+                <h5 class="mb-3">Trung Tâm Thương Mại & Dịch Vụ Cao Cấp</h5>
+                <span>Một không gian mua sắm và dịch vụ toàn diện với các sản phẩm đặc sản và hàng thủ công tinh tế.
+                     Những gian hàng được bố trí gọn gàng, mang lại trải nghiệm tiện nghi và thư giãn. 
+                    Đây là điểm dừng chân lý tưởng cho những ai yêu thích sự hiện đại và tiện lợi.
+                </span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/dichvu/giaitri/giaitri1.webp' %}" alt="Icon">
+                <h5 class="mb-3">Khu Thể Thao Tổng Hợp Hiện Đại</h5>
+                <span>Nơi bạn có thể đánh thức sức sống với các hoạt động như bóng đá, tennis hay yoga. 
+                    Các khu vực thể thao được thiết kế hiện đại, phù hợp cho mọi lứa tuổi. 
+                    Đây là lựa chọn hoàn hảo để vừa rèn luyện sức khỏe vừa thư giãn.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/trangchu/anh7.jpg' %}" alt="Icon">
+                <h5 class="mb-3">Dịch Vụ & Trưng Bày Cao Cấp</h5>
+                <span>Khám phá không gian trưng bày tinh tế với các sản phẩm thủ công mỹ nghệ độc đáo và dịch vụ chất lượng cao. 
+                    Từng chi tiết được chăm chút để làm hài lòng mọi khách hàng.
+                     Một nơi lý tưởng để kết nối văn hóa và hiện đại.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/dichvu/giaitri/vuichoi3.jpg' %}" alt="Icon">
+                <h5 class="mb-3">Khu Vui Chơi Trẻ Em Xanh Mát</h5>
+                <span>Không gian vui chơi bổ ích với các trò chơi sáng tạo, an toàn cho các bé.
+                     Các hoạt động ngoài trời giúp trẻ phát triển kỹ năng và khám phá thế giới xung quanh.
+                     Đây là thiên đường nhỏ dành cho các gia đình có trẻ nhỏ.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/trangchu/anh1.jpg' %}" alt="Icon">
+                <h5 class="mb-3">Hội Trường Sang Trọng & Đa Năng</h5>
+                <span>Không gian hội trường hiện đại với sức chứa linh hoạt, hệ thống âm thanh và ánh sáng tối tân.
+                     Phù hợp để tổ chức hội nghị, tiệc cưới hay hội thảo với quy mô lớn nhỏ.
+                     Mỗi sự kiện tại đây đều được chăm chút để trở nên đáng nhớ.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <img style="border-radius: 25px;" class="img-fluid mb-3" src="{% static 'doixuan/assets/img/dichvu/camping/camp2.jpeg' %}" alt="Icon">
+                <h5 class="mb-3">Khu Cắm Trại Sinh Thái Cao Cấp</h5>
+                <span>Một trải nghiệm cắm trại độc đáo giữa không gian xanh mát, thoáng đãng. 
+                    Ngắm nhìn bầu trời đầy sao và hòa mình vào thiên nhiên trong lành. 
+                    Đây là nơi để thư giãn, kết nối và lưu lại những khoảnh khắc đáng nhớ cùng gia đình hoặc bạn bè.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Animal Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <p><span class="text-primary me-2">#</span>Trải nghiệm hấp dẫn</p>
+                <h1 class="display-5 mb-0">Tận Hưởng <br> <span class="text-primary">Kì Nghỉ </span>Tuyệt Vời</h1>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <a class="animal-item"  data-lightbox="animal">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'doixuan/assets/img/dichvu/buffet/lau1.jpg'%}" alt="">
+                                <div class="animal-text p-4">
+                                    <h5 class="text-white mb-0">Lẩu Hàn Quốc</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="animal-item"  data-lightbox="animal">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'doixuan/assets/img/dichvu/buffet/viet2.webp'%}" alt="">
+                                <div class="animal-text p-4">
+                                    <h5 class="text-white mb-0">Món ăn hương vị Việt</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <a class="animal-item"  data-lightbox="animal">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'doixuan/assets/img/dichvu/cafe/cafe3.jpg'%}" alt="">
+                                <div class="animal-text p-4">
+                                    <h5 class="text-white mb-0">Cafe</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="animal-item"  data-lightbox="animal">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen3.jpg'%}" alt="">
+                                <div class="animal-text p-4">
+                                    <h5 class="text-white mb-0">Chèo thuyền Kayak</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <a class="animal-item"  data-lightbox="animal">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'doixuan/assets/img/dichvu/camping/camp5.jpg'%}" alt="">
+                                <div class="animal-text p-4">
+                                    <h5 class="text-white mb-0">Camping</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="animal-item"  data-lightbox="animal">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'doixuan/assets/img/dichvu/giaitri/sankhau3.jpg'%}" alt="">
+                                <div class="animal-text p-4">
+                                    <h5 class="text-white mb-0">Đêm nhạc</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Animal End -->
+
+
+<!-- Visiting Hours Start -->
+<div class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                <h1 class="display-6 text-white mb-5">Thời Gian Hoạt Động</h1>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <span>Thứ 2</span>
+                        <span>9:00AM - 6:00PM</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Thứ 3</span>
+                        <span>9:00AM - 6:00PM</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Thứ 4</span>
+                        <span>9:00AM - 6:00PM</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Thứ 5</span>
+                        <span>9:00AM - 6:00PM</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Thứ 6</span>
+                        <span>9:00AM - 6:00PM</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Thứ 7 </span>
+                        <span>9:00AM - 6:00PM</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Chủ Nhật</span>
+                        <span>Fulltime</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="display-6 text-white mb-5">Thông Tin Liên Hệ</h1>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Trụ Sở</td>
+                            <td>Văn Phòng Tiếp Nhận</td>
+                        </tr>
+                        <tr>
+                            <td>Địa Chỉ</td>
+                            <td>Đồi 79 Mùa Xuân Mê Linh Hà Nội</td>
+                        </tr>
+                        <tr>
+                            <td>Liên Lạc</td>
+                            <td>
+                                <p class="mb-2">+012 345 6789</p>
+                                <p class="mb-0">doixuan79@gmail.com</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hỗ Trợ Viên</td>
+                            <td>
+                                <p class="mb-2">+012 345 6789</p>
+                                <p class="mb-0">hadinhmanh.com</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Visiting Hours End -->
+
+
+<!-- Membership Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <p><span class="text-primary me-2">#</span>Dịch Vụ</p>
+                <h1 class="display-5 mb-0">Ưu Đãi Dịch Vụ Chỉ Có Tại <span class="text-primary">Đồi Xuân 79</span></h1>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <a style="border-radius:25px" class="btn btn-primary py-3 px-5" href="">Chi Tiết Dịch Vụ</a>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="membership-item position-relative">
+                    <img class="img-fluid" src="asset/img/animal-lg-1.jpg" alt="">
+                    <h1 class="display-1">01</h1>
+                    <h4 class="text-white mb-3">Popular</h4>
+                    <h3 class="text-primary mb-4">$99.00</h3>
+                    <p><i class="fa fa-check text-primary me-3"></i>10% discount</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>2 adult and 2 child</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Free animal exhibition</p>
+                    <a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="membership-item position-relative">
+                    <img class="img-fluid" src="asset/img/animal-lg-2.jpg" alt="">
+                    <h1 class="display-1">02</h1>
+                    <h4 class="text-white mb-3">Standard</h4>
+                    <h3 class="text-primary mb-4">$149.00</h3>
+                    <p><i class="fa fa-check text-primary me-3"></i>15% discount</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>4 adult and 4 child</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Free animal exhibition</p>
+                    <a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="membership-item position-relative">
+                    <img class="img-fluid" src="asset/img/animal-lg-3.jpg" alt="">
+                    <h1 class="display-1">03</h1>
+                    <h4 class="text-white mb-3">Premium</h4>
+                    <h3 class="text-primary mb-4">$199.00</h3>
+                    <p><i class="fa fa-check text-primary me-3"></i>20% discount</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>6 adult and 6 child</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Free animal exhibition</p>
+                    <a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Membership End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Đánh Giá Của Khách Hàng</h1>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item text-center">
+                <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="{% static 'doixuan/assets/img/trangchu/user1.jpg'%}" style="width: 100px; height: 100px;">
+                <div class="testimonial-text rounded text-center p-4">
+                    <p>Nơi tuyệt đẹp để nghỉ cuối tuần! Cảnh quan xanh mát, không khí trong lành và nhiều hoạt động như chèo thuyền, dã ngoại. Đồ ăn rất tươi ngon, mang đậm hương vị địa phương. Chắc chắn sẽ quay lại!</p>
+                    <h5 class="mb-1">Trần Hà Huyền</h5>
+                    <span class="fst-italic">CEO</span>
+                </div>
+            </div>
+            <div style ="border-radius: 20px;" class="testimonial-item text-center">
+                <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="{% static 'doixuan/assets/img/trangchu/user2.jpg'%}" style="width: 100px; height: 100px;">
+                <div class="testimonial-text rounded text-center p-4">
+                    <p>Khu sinh thái thiết kế hài hòa với thiên nhiên. Nhân viên thân thiện, nhiệt tình. Hồ nước rộng, cây xanh mát. Cơ sở vật chất cần cải thiện thêm nhưng tổng thể vẫn rất ổn.</p>
+                    <h5 class="mb-1">Nguyễn Văn Minh</h5>
+                    <span class="fst-italic">Nhân Viên Văn Phòng</span>
+                </div>
+            </div>
+            <div style ="border-radius: 20px;" class="testimonial-item text-center">
+                <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="{% static 'doixuan/assets/img/trangchu/user3.jpg'%}" style="width: 100px; height: 100px;">
+                <div class="testimonial-text rounded text-center p-4">
+                    <p>Đồi Xuân 79 là nơi lý tưởng để tránh xa thành phố. Khu cắm trại và các hoạt động nhóm rất thú vị. Giá hợp lý, phù hợp cho team building. Rất đáng để ghé thăm!</p>
+                    <h5 class="mb-1">Hoàng Minh Tuấn Anh</h5>
+                    <span class="fst-italic">Designed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+{% endblock %}

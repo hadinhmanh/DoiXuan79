@@ -1,0 +1,222 @@
+{% extends "layout-main.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Header Section */
+    .header-section {
+        position: relative;
+        background-image: url('{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen1.jpg' %}'); /* Thay link ảnh banner tại đây */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Hiệu ứng mờ */
+        z-index: 0;
+    }
+    .header-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        z-index: 1;
+        color:white;
+        position: relative;
+    }
+    .header-section p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        z-index: 1;
+        position: relative;
+    }
+    .header-section .btn {
+        z-index: 1;
+        position: relative;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #2e7d32;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .header-section .btn:hover {
+        background-color: #43a047;
+    }
+
+    .fixed-size {
+        width: 100%;
+        height: 250px; /* Cố định chiều cao ảnh */
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+    }
+    
+    .fixed-size img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ảnh tự điều chỉnh kích thước để phù hợp khung */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .fixed-size:hover img {
+        transform: scale(1.1); /* Phóng to nhẹ khi hover */
+        opacity: 0.8; /* Làm mờ ảnh khi hover */
+    }
+    
+    .image-label {
+        background-color: rgba(255, 255, 255, 0.8); /* Nền trắng mờ */
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 10px 0;
+        color: #000;
+        transition: all 0.3s ease;
+    }
+    
+    .fixed-size:hover .image-label {
+        background-color: rgba(0, 0, 0, 0.7); /* Nền đen khi hover */
+        color: #fff;
+    }
+    
+
+</style>
+<body>
+    <!-- Header -->
+    <section class="header-section">
+        <h1>Khám phá Đồi 79 Mùa Xuân</h1>
+        <p>Trải nghiệm không gian xanh mát, lịch sử và văn hóa đặc sắc</p>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Giới Thiệu</h2>
+            <p class="text-center">
+                Chèo thuyền kayak là một hoạt động giải trí thú vị, mang đến cho bạn cơ hội khám phá thiên nhiên tuyệt đẹp từ góc nhìn hoàn toàn mới. 
+                Đây là cách tuyệt vời để thư giãn, vận động và tận hưởng không khí trong lành.
+            </p>
+        </div>
+    </section>
+
+    <!-- Thư viện ảnh -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Một số hình ảnh</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="image-card position-relative">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen1.jpg' %}" class="img-fluid rounded" alt="Memory">
+                        <div class="image-label position-absolute bottom-0 start-0 w-100 text-center">
+                            Kỷ niệm
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="image-card position-relative">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen2.jpg' %}" class="img-fluid rounded" alt="Portrait">
+                        <div class="image-label position-absolute bottom-0 start-0 w-100 text-center">
+                            Khoảnh Khắc
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="image-card position-relative">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen3.jpg' %}" class="img-fluid rounded" alt="Wedding">
+                        <div class="image-label position-absolute bottom-0 start-0 w-100 text-center">
+                            Cảnh sắc
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="image-card position-relative">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen4.jpg' %}" class="img-fluid rounded" alt="Travel">
+                        <div class="image-label position-absolute bottom-0 start-0 w-100 text-center">
+                            Khám phá
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="image-card position-relative">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen5.jpg' %}" class="img-fluid rounded" alt="Fashion">
+                        <div class="image-label position-absolute bottom-0 start-0 w-100 text-center">
+                            Phong cảnh
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="image-card position-relative">
+                        <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen6.jpg' %}" class="img-fluid rounded" alt="Portrait">
+                        <div class="image-label position-absolute bottom-0 start-0 w-100 text-center">
+                            Yên bình
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Lợi ích của chèo thuyền -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Lợi Ích Của Chèo Thuyền Kayak</h2>
+            <div class="row g-4">
+                <!-- Lợi ích 1 -->
+                <div class="col-12 col-md-6 d-flex">
+                    <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen7.jpg' %}" class="img-fluid rounded me-3" alt="Tăng Cường Sức Khỏe" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div>
+                        <h4>1. Tăng Cường Sức Khỏe</h4>
+                        <p>
+                            Chèo thuyền kayak là một cách tuyệt vời để cải thiện sức khỏe thể chất, đặc biệt là tăng cường cơ bắp, khả năng hô hấp, và sự dẻo dai.
+                        </p>
+                    </div>
+                </div>
+                <!-- Lợi ích 2 -->
+                <div class="col-12 col-md-6 d-flex">
+                    <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen8.jpg' %}" class="img-fluid rounded me-3" alt="Thư Giãn Tâm Hồn" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div>
+                        <h4>2. Thư Giãn Tâm Hồn</h4>
+                        <p>
+                            Hoạt động chèo thuyền giúp bạn giải tỏa căng thẳng và tận hưởng cảm giác yên bình từ thiên nhiên.
+                        </p>
+                    </div>
+                </div>
+                <!-- Lợi ích 3 -->
+                <div class="col-12 col-md-6 d-flex">
+                    <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen9.webp' %}" class="img-fluid rounded me-3" alt="Gắn Kết Gia Đình và Bạn Bè" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div>
+                        <h4>3. Gắn Kết Gia Đình và Bạn Bè</h4>
+                        <p>
+                            Đây là hoạt động lý tưởng để cùng người thân hoặc bạn bè trải nghiệm và tạo dựng những kỷ niệm khó quên.
+                        </p>
+                    </div>
+                </div>
+                <!-- Lợi ích 4 -->
+                <div class="col-12 col-md-6 d-flex">
+                    <img src="{% static 'doixuan/assets/img/dichvu/cheothuyen/thuyen10.jpg' %}" class="img-fluid rounded me-3" alt="Khám Phá Thiên Nhiên" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div>
+                        <h4>4. Khám Phá Thiên Nhiên</h4>
+                        <p>
+                            Chèo thuyền mang đến góc nhìn độc đáo, giúp bạn khám phá vẻ đẹp tự nhiên của sông nước, hồ, hoặc biển.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+</body>
+
+
+{% endblock %}
